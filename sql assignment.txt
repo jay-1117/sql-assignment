@@ -517,7 +517,32 @@ INSERT INTO `salesperson` (`SNo`, `SName`, `CITY`, `COMM`) VALUES ('1001', 'Peel
 
 INSERT INTO `customer` (`CNM`, `CNAME`, `CITY`, `Rating`, `SNO`, `SNO_fk`) VALUES ('201', 'Hoffman', 'London', '100', '1001'), ('Giovanne', 'Roe', '200', '1003'), ( 'Liu', 'San Jose', '300', '1002'), ('Grass', 'Barcelona', '100', '1002'), ('206', 'Clemens', 'London', '300', '1004'), ('Pereira', 'Roe', '100', '1003');
 
+task-a
+--All order for more than $1000.
 
+--select *from customer where SNo_fk>1000
+
+
+task-b
+--Names and cities of all salesperson in London with commission above 0.12
+
+select *from salesperson where COMM>0.12
+
+
+task-c
+--All salesperson either in Barcelona or in London.
+
+select* from salesperson where CITY="Barcelona" or "London"
+
+
+task-d
+--All salesperson with commission between 0.10 and 0.12.
+(Boundary values should be excluded).
+
+select* from salesperson where COMM between 0.12 and 0.12
+
+task-e
+--All customer excluding those with rating <=100 unless they are located in Rome.
 
 
 
